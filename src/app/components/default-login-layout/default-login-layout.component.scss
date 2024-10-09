@@ -46,6 +46,25 @@ main{
             width: 100%;
             gap:30px;
 
+            .divider{
+                display: flex;
+                font-size: 14px;
+                color:$text-color2;
+                font-weight: 400;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                gap: 20px;
+
+
+                div{
+                    height: 2px;
+                    background-color: $text-color2;
+                    flex-grow: 1;
+
+                }
+            }
+
             button{
                 width: 100%;
                 border-radius: 8px;
@@ -54,6 +73,7 @@ main{
                 border: none;
                 background: transparent;
                 padding: 12px 24px;
+                cursor: pointer;
     
                 &.btnPrimary{
                     background-color: $primary-color;
