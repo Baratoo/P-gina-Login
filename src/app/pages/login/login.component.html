@@ -4,7 +4,24 @@
     secundaryBtnText="Registrar agora"
     pragas="PragasClub"
 >
-    <form>
-        
+    <form [formGroup]="loginForm">
+        <app-primary-input
+            formControlName="email"
+            inputName="email"
+            type="email"
+            label="Email"
+            placeHolder="email@gmail.com"
+        >
+            <img src="/assets/images/email.svg" alt="">
+        </app-primary-input>
+        <app-primary-input
+        formControlName="senha"
+            inputName="senha"
+            type="senha"
+            label="Sua Senha"
+        >
+            <img src="/assets/images/senha.svg" alt="">
+    </app-primary-input>
+    <span>Esqueci minha senha</span>
     </form>
 </app-default-login-layout>
