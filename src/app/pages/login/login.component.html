@@ -3,6 +3,9 @@
     primaryBtnText="Entrar agora"
     secundaryBtnText="Registrar agora"
     pragas="PragasClub"
+    (submit)="submit()"
+    (navigate)="navigate()"
+
 >
     <form [formGroup]="loginForm">
         <app-primary-input

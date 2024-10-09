@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DefaultLoginLayoutComponent } from '../../components/default-login-layout/default-login-layout.component';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { PrimaryInputComponent } from 'src/app/components/primary-input/primary-input.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -14,11 +15,13 @@ import { PrimaryInputComponent } from 'src/app/components/primary-input/primary-
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent{
 
   loginForm!: FormGroup;
 
-  constructor() {
+  constructor(
+    private router: Router
+  ) {
 
     this.loginForm = new FormGroup({
       email: new FormControl('', [Validators.required, Validators.email]),
@@ -26,7 +29,12 @@ export class LoginComponent implements OnInit {
     })
    }
 
-  ngOnInit(): void {
-  }
+   submit(){
+    console.log(this.loginForm.value)
+   }
+
+   navigate(){
+    this.router.navigate(["signup"])
+   }
 
 }
