@@ -7,7 +7,7 @@
     (navigate)="navigate()"
 
 >
-    <form [formGroup]="loginForm">
+    <form [formGroup]="loginForm" (ngSubmit)="submit()">
         <app-primary-input
             formControlName="email"
             inputName="email"
@@ -18,9 +18,9 @@
             <img src="/assets/images/email.svg" alt="">
         </app-primary-input>
         <app-primary-input
-        formControlName="senha"
-            inputName="senha"
-            type="senha"
+            formControlName="senha"
+            inputName="password"
+            type="password"
             label="Sua Senha"
         >
             <img src="/assets/images/senha.svg" alt="">

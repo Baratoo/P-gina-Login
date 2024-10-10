@@ -3,9 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { provideRoutes, RouterModule } from '@angular/router';
+import {  RouterModule } from '@angular/router';
 import { routes } from './app.routes';
-import { PrimaryInputComponent } from './components/primary-input/primary-input.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -14,10 +15,10 @@ import { PrimaryInputComponent } from './components/primary-input/primary-input.
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpClientModule
   ],
-  providers: [
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
