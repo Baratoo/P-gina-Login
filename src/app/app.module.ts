@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RouterModule } from '@angular/router';
+import { provideRoutes, RouterModule } from '@angular/router';
 import { routes } from './app.routes';
 import { PrimaryInputComponent } from './components/primary-input/primary-input.component';
 
@@ -16,7 +16,8 @@ import { PrimaryInputComponent } from './components/primary-input/primary-input.
     AppRoutingModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
