@@ -1,0 +1,49 @@
+<app-default-login-layout 
+    title="Registre sua conta agora!"
+    primaryBtnText="Registrar agora"
+    secundaryBtnText="Logar agora"
+    pragas="PragasClub"
+    (submit)="submit()"
+    (navigate)="navigate()"
+    [disablePrimaryBtn]="!signupForm.valid"
+>
+
+    <form [formGroup]="signupForm" (ngSubmit)="submit()">
+
+        <app-primary-input
+            formControlName="nome"
+            inputName="nome"
+            type="text"
+            label="Seu nome"
+
+        >
+            <img src="/assets/images/email.svg" alt="">
+        </app-primary-input>
+
+        <app-primary-input
+            formControlName="email"
+            inputName="email"
+            type="email"
+            label="Email"
+            placeHolder="email@gmail.com"
+        >
+            <img src="/assets/images/email.svg" alt="">
+        </app-primary-input>
+        <app-primary-input
+            formControlName="senha"
+            inputName="password"
+            type="password"
+            label="Sua Senha"
+        >
+            <img src="/assets/images/senha.svg" alt="">
+        </app-primary-input>
+        <app-primary-input
+            formControlName="confirmarSenha"
+            inputName="confirmarSenha"
+            type="password"
+            label="Confirme sua senha"
+        >
+            <img src="/assets/images/senha.svg" alt="">
+        </app-primary-input>
+    </form>
+</app-default-login-layout>
