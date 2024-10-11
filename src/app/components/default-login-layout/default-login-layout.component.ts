@@ -13,6 +13,7 @@ export class DefaultLoginLayoutComponent{
   @Input() title: String = "";
   @Input() primaryBtnText: String = "";
   @Input() secundaryBtnText: String = "";
+  @Input() disablePrimaryBtn: boolean = true;
   @Input() pragas: String = "";
 
   @Output("submit") onSubmit = new EventEmitter();

@@ -75,6 +75,10 @@ main{
                 background: transparent;
                 padding: 12px 24px;
                 cursor: pointer;
+
+                &:disabled {
+                    opacity: 0.7;
+                }
     
                 &.btnPrimary{
                     background-color: $primary-color;

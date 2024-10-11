@@ -5,8 +5,9 @@
     pragas="PragasClub"
     (submit)="submit()"
     (navigate)="navigate()"
-
+    [disablePrimaryBtn]="!loginForm.valid"
 >
+
     <form [formGroup]="loginForm" (ngSubmit)="submit()">
         <app-primary-input
             formControlName="email"
